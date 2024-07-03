@@ -1,0 +1,30 @@
+<html>
+
+<body>
+    <script>
+        //Return all the prime numbers in an array using IIFE function 
+(function ()
+{
+    var primes=[]
+   for(var i=2; i<=100; i++)
+   {
+      var flag=0;
+      for(var j=2; j<i; j++)
+      {
+         if(i%j==0)
+         {
+            flag=1;
+            break;//it breaks out of the loop and continues executing the code after the loop 
+         }
+      }
+      if(flag==0)
+      {
+        primes.push(i);
+      }
+   }
+   console.log(primes)
+})()
+    </script>
+</body>
+
+</html>

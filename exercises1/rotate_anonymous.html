@@ -1,0 +1,30 @@
+<html>
+
+<body>
+    <script>
+// Rotate an array by k times using anonymous function
+var Array = [1, 2, 3, 4,5];
+var n = Array.length;
+var K = 2;
+var rotateArray1=function (a, n, k)
+{
+    k = k % n;
+  
+    for (var i = 0; i < n; i++) {
+        if (i < k) {
+  
+           
+            console.log(a[n + i - k] + " ");
+        }
+        else {
+  
+            
+           console.log((a[i - k]) + " ");
+        }
+    }
+}
+rotateArray1 (Array, n, K);
+</script>
+</body>
+
+</html>

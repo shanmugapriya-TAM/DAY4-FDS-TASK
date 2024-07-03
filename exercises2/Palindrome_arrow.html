@@ -1,0 +1,30 @@
+<html>
+
+<body>
+    <script>
+        // Function to check if given string  is Palindrome or not 
+        //using anonymous function
+        var isPalindrome = function (str) {
+            var len = Math.floor(str.length / 2);
+            for (var i = 0; i < len; i++) {
+                if (str[i] !== str[str.length - i - 1])
+                    return false;
+            }
+            return true;
+        }
+        // Function to return all Palindrome string using arrow function
+        var arr = ["313","eve", "car", "ada", "racecar", "cool"];
+        var palindromefunction =(arr)=> {
+            var ans = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (isPalindrome(arr[i])) {
+                    ans.push(arr[i]);
+                }
+            }
+            console.log(ans);
+        }
+        palindromefunction(arr)
+    </script>
+</body>
+
+</html>

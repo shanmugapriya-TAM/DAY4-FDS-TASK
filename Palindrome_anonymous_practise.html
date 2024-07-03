@@ -1,0 +1,58 @@
+<html>
+
+<body>
+    <script>
+        var isPalindrome = function fastestIsPalindrome(str) {
+            var len = Math.floor(str.length / 2);
+            //console.log(len)
+            for (var i = 0; i < len; i++) {
+                if (str[i] !== str[str.length - i - 1])
+                    return false;
+            }
+            return true;
+        }
+        // console.log(palin('tamil'))
+
+        // function isPalindrome(s)
+        // {
+        //     // Copy string s char into string a
+        //     let a = s;
+        //     s = s.split('').reverse().join('');
+
+        //     // Check if two string are equal or not
+        //     return s == a;
+        // }
+
+        // Function to return all Palindrome string
+        function PalindromicStrings(arr, N) {
+            let ans = [];
+
+            // Loop to find palindrome string
+            for (let i = 0; i < N; i++) {
+
+                // Checking if given string is
+                // palindrome or not
+                if (isPalindrome(arr[i])) {
+
+                    // Update answer variable
+                    ans.push(arr[i]);
+                }
+            }
+            return ans;
+        }
+
+        // Driver Code
+        let arr = ["313", "car", "ada", "racecar", "cool"];
+        let N = arr.length;
+
+        // Print required answer
+        let s = PalindromicStrings(arr, N);
+        console.log(s)
+        // if(s.length == 0)
+        //     document.write("-1");
+        // for(let st of s)
+        //     document.write(st," ");
+    </script>
+</body>
+
+</html>

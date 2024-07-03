@@ -1,0 +1,21 @@
+<html>
+
+<body>
+    <script>
+        //Convert all the strings to title caps in a string array using arroe function
+        var str = "in the book train your mind for peak performance: a science - based approach for achieving your goals";       
+        var def= (str) =>{
+            str = str.toLowerCase().split(' ');
+            //console.log (str)
+            for (var i = 0; i < str.length; i++) {
+                str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+            }
+            return str.join(' ');
+           // console.log (str.join(' '))
+        }
+        var res=def(str)
+        console.log(res)
+    </script>
+</body>
+
+</html>

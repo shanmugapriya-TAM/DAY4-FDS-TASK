@@ -1,0 +1,33 @@
+<html>
+
+<body>
+    <script>
+        // Function to check if given string  is Palindrome or not 
+        //using anonymous function
+        var isPalindrome = function (str) {
+            //Math.floor()==>static method always rounds down and 
+            //returns the largest integer less than or equal to a given number
+            var len = Math.floor(str.length / 2);
+            //console.log(len)
+            for (var i = 0; i < len; i++) {
+                if (str[i] !== str[str.length - i - 1])
+                    return false;
+            }
+            return true;
+        }
+        // Function to return all Palindrome string using IIFE function
+        var arr = ["313","eve", "car", "ada", "racecar", "cool"];
+        (function (arr) {
+            var ans = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (isPalindrome(arr[i])) {
+                    ans.push(arr[i]);
+                }
+            }
+            console.log(ans);
+        })(arr)
+
+    </script>
+</body>
+
+</html>

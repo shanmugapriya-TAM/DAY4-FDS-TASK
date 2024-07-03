@@ -1,0 +1,20 @@
+<html>
+
+<body>
+    <script>
+        //Print odd numbers between 1 t0 10 in an array using IIFE function 
+        (function () {
+            //In IIFE function new empty array should be create inside the function
+            var newarray = []
+            for (var i = 0; i < 100; i++) {
+                var cal = i % 2 !== 0;
+                if (cal == true) {
+                    newarray.push(i)
+                }
+            }
+            console.log(newarray)
+        })();
+    </script>
+</body>
+
+</html>

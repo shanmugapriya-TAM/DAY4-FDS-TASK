@@ -1,0 +1,22 @@
+<html>
+
+<body>
+    <script>
+        //Print odd numbers in an array using anonymous function 
+         var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13]
+         var newarray = []
+         var odd = function () {
+            for (var i = 0; i < array.length; i++) {
+                var cal = array[i] % 2 !== 0;
+                if (cal == true) {
+                     newarray.push(array[i])
+                 }
+            }
+             return newarray;
+         }
+         var res=odd()
+         console.log(res)
+    </script>
+</body>
+
+</html>
